@@ -5,7 +5,7 @@ from datetime import datetime
 
 
 # Create a VideoCapture object
-cap = cv2.VideoCapture('C:/Users/lotla/Documents/head movement project/HeadTrackVR/Recordings/drone.mp4')
+cap = cv2.VideoCapture('Recordings/drone.mp4')
 
 # Check if video opened successfully
 if not cap.isOpened():
