@@ -3,17 +3,23 @@ from tkinter import filedialog
 from tkinter import messagebox
 import app
 
+#show popup window function after analysis is done
 def show_popup(output_location):
     message = f"Video analysis done. Excel file 'movement_log.xlsx' saved to {output_location}"
     messagebox.showinfo("Analysis Complete", message)
 
+#run the app script
 def analyze():
+    #get input from text boxes and save to variables
     video_file = video_file_entry.get()
     output_file = output_file_entry.get()
     threshold = int(threshold_entry.get())
+    #pass variables to app script
     app.process_video(video_file, output_file, threshold)
     # Show the popup window after the analysis is done
     show_popup(output_file)
+
+
 # Function to browse files
 def browse_file(entry_widget):
     filename = filedialog.askopenfilename()
