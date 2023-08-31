@@ -52,7 +52,7 @@ def compute_optical_flow(video_path, threshold, window_size):
 
 
 # Load the labeled data
-data_path = "Recordings\Frames\\annotation_template.xlsx"  # Replace with your path
+data_path = "path_to_labels"  # Replace with your path
 df = pd.read_excel(data_path)
 y_true = df['Head Movement'].tolist()
 
@@ -63,10 +63,10 @@ y_true_binary = [1 if label == "YES" else 0 for label in y_true]
 test_fold = [0]*len(y_true_binary)
 predefined_split = PredefinedSplit(test_fold)
 
-video_path = "Recordings\VR2_Trim.mp4"  # Replace with your video path
+video_path = "path_to_video"  # Replace with your video path
 
 param_grid = {
-    'threshold': list(range(2, 9)),
+    'threshold': list(range(3, 8)),
     'window_size': list(range(5, 10, 15))  # You can adjust this range based on your requirements
 }
 

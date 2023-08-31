@@ -46,6 +46,6 @@ def create_annotation_template(video_path, output_folder):
     # Save the DataFrame to an Excel file
     df.to_excel(os.path.join(output_folder, 'annotation_template_test.xlsx'), index=False)
 
-video_path = 'Recordings\VR2_trim.mp4'
-output_folder = 'Recordings\Frames'
+video_path = 'path_to_video_file'
+output_folder = 'path_to_output_folder'
 create_annotation_template(video_path, output_folder)
